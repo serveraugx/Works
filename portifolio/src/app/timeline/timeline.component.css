@@ -1,0 +1,33 @@
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 20px 0;
+  }
+  
+  .timeline ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline ul li {
+    position: relative;
+    padding: 10px 0;
+  }
+  
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #007acc;
+    border-radius: 50%;
+  }
+  
+  .timeline-content {
+    border-left: 3px solid #ddd;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  

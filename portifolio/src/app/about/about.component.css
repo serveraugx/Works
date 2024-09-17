@@ -1,0 +1,45 @@
+.about-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-page section {
+    margin-bottom: 40px;
+  }
+  
+  .about-page h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .about-page p,
+  .about-page blockquote {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-page blockquote {
+    font-style: italic;
+    border-left: 5px solid #ccc;
+    padding-left: 15px;
+    margin: 10px 0;
+  }
+  
+  .timeline,
+  .interactive-map,
+  .video-interviews {
+    margin-top: 20px;
+  }
+  
+  .app-timeline,
+  .app-interactive-map,
+  .app-video-player {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

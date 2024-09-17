@@ -1,0 +1,7 @@
+<div class="video-container" *ngFor="let embedUrl of embedUrls">
+  <iframe 
+    [src]="embedUrl | safeUrl" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>

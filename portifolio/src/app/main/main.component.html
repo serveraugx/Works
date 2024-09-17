@@ -1,0 +1,99 @@
+<app-top-bar></app-top-bar>
+<div class="home-page">
+  <!-- Slideshow Section -->
+  <section class="slideshow-container">
+    <div *ngFor="let image of images; let i = index" class="slide" [ngClass]="{'active': i === currentSlide}">
+      <img [src]="image" alt="Artist Work {{ i + 1 }}" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" (click)="changeSlide(-1)">&#10094;</a>
+    <a class="next" (click)="changeSlide(1)">&#10095;</a>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span *ngFor="let _ of images; let i = index" class="dot" [ngClass]="{'active': i === currentSlide}" (click)="setSlide(i)"></span>
+    </div>
+    <!-- <div class="caption">
+      <h2>Contemporary Art & Fashion from Tanzanian Artists</h2>
+  </div> -->
+  </section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to Hamza Mohammed Ausiy's Showcase</h1>
+        <p>Explore the captivating world of Hamza Mohammed Ausiy, where art meets Zanzibar's cultural heritage.</p>
+        <!-- <h2>Artist Statement</h2> -->
+        <p>
+          Hamza Mohammed Ausiy's work is a profound reflection of his deep connection to Zanzibar and its rich cultural landscapes. Through his monochromatic palette and meticulous techniques, he captures the essence of the island's architecture, people, and natural beauty, transforming them into evocative and timeless pieces of art.
+        </p>
+      </div>
+    </section>
+    
+
+    
+    <!-- Featured Works -->
+    <section class="featured-works">
+      <h2>Featured Works</h2>
+      <div class="featured-artworks">
+        <!-- Add artworks dynamically here, example given below -->
+        <div class="artwork">
+          <img src="path/to/artwork1.jpg" alt="Artwork Title 1">
+          <h3>Stone Town Reflections</h3>
+          <p>Year: 2023</p>
+          <p>Materials: Oil on Canvas</p>
+          <p>Dimensions: 36 x 48 inches</p>
+        </div>
+        <div class="artwork">
+          <img src="path/to/artwork2.jpg" alt="Artwork Title 2">
+          <h3>Echoes of the Sea</h3>
+          <p>Year: 2022</p>
+          <p>Materials: Acrylic on Canvas</p>
+          <p>Dimensions: 30 x 40 inches</p>
+        </div>
+        <!-- Add more artworks as needed -->
+      </div>
+    </section>
+    
+    <!-- Upcoming Exhibitions -->
+    <section class="upcoming-exhibitions">
+      <h2>Upcoming Exhibitions</h2>
+      <div class="exhibitions">
+        <!-- Add exhibitions dynamically here, example given below -->
+        <div class="exhibition">
+          <h3>Art Zanzibar 2024</h3>
+          <p>Date: January 15 - February 20, 2024</p>
+          <p>Location: Zanzibar National Gallery, Stone Town</p>
+          <p>Description: A solo exhibition featuring Hamza Mohammed Ausiy's latest works, celebrating the essence of Zanzibar through contemporary art.</p>
+        </div>
+        <div class="exhibition">
+          <h3>Contemporary African Art Fair</h3>
+          <p>Date: March 10 - March 14, 2024</p>
+          <p>Location: London, UK</p>
+          <p>Description: Hamza will be showcasing his new series inspired by the dynamic interplay of light and shadow in Stone Town's alleyways.</p>
+        </div>
+        <!-- Add more exhibitions as needed -->
+      </div>
+    </section>
+   
+    
+    <!-- Contact Information -->
+   <!-- < <section class="contact-info">
+
+      <h2>Contact</h2>
+      <p>For inquiries, collaborations, or commissions, please reach out via email or social media.</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://vimeo.com" target="_blank"><i class="fab fa-vimeo-v"></i></a>
+      </div>
+      <form class="newsletter-signup">
+        <label for="email">Subscribe to our newsletter:</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>> -->
+    <app-footer></app-footer>
+  </div>
+  

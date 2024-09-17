@@ -1,0 +1,146 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: #007acc;
+  }
+  
+  .nav-links .disabled {
+    color: lightgray;
+    pointer-events: none;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a mat-icon {
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a mat-icon:hover {
+    color: #007acc;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  .close-button {
+    display: none;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: white;
+      transform: translateX(-100%);
+      flex-direction: column;
+      padding-top: 20px;
+    }
+  
+    .nav-links.show {
+      transform: translateX(0);
+    }
+  
+    .close-button {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  /* src/app/header/header.component.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand {
+  color: #a3c1e5; /* Light color for 'asante' */
+}
+
+.accent {
+  color: #ff7f50; /* Accent color for 'sanaa.' */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.language-cart {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}

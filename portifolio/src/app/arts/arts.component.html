@@ -1,0 +1,78 @@
+<app-top-bar></app-top-bar>
+<div class="gallery-page">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Search artworks..." />
+    </div>
+  
+    <!-- Filters Section -->
+    <!-- <div class="filters">
+      <label for="category">Category:</label>
+      <select id="category" [(ngModel)]="selectedCategory">
+        <option value="">All</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+  
+      <label for="medium">Medium:</label>
+      <select id="medium" [(ngModel)]="selectedMedium">
+        <option value="">All</option>
+        <option *ngFor="let medium of mediums" [value]="medium">{{ medium }}</option>
+      </select>
+  
+      <label for="year">Year:</label>
+      <select id="year" [(ngModel)]="selectedYear">
+        <option value="">All</option>
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+   -->
+    <!-- Gallery Section -->
+    <div class="gallery">
+      <div
+        *ngFor="let artwork of filteredArtworks()"
+        class="artwork-card"
+        (click)="openLightbox(artwork)"
+      >
+        <img [src]="artwork.image" [alt]="artwork.title" class="artwork-image" />
+        <div class="artwork-details">
+          <h3>{{ artwork.title }}</h3>
+          <p>{{ artwork.year }}</p>
+          <p>{{ artwork.materials }}</p>
+          <p>{{ artwork.dimensions }}</p>
+          <button *ngIf="artwork.purchaseLink" (click)="purchaseArtwork()">
+            Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Lightbox for Zoom and Full-Screen View -->
+    <div class="lightbox" *ngIf="selectedArtwork" (click)="closeLightbox()">
+      <div class="lightbox-content">
+        <img [src]="selectedArtwork.image" [alt]="selectedArtwork.title" class="lightbox-image" />
+        <div class="lightbox-details">
+          <h2>{{ selectedArtwork.title }}</h2>
+          <p>Year: {{ selectedArtwork.year }}</p>
+          <p>Materials: {{ selectedArtwork.materials }}</p>
+          <p>Dimensions: {{ selectedArtwork.dimensions }}</p>
+          <button *ngIf="selectedArtwork.purchaseLink" (click)="purchaseArtwork()">
+            Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="lightbox" *ngIf="selectedArtwork" (click)="closeLightbox()">
+      <div class="lightbox-content">
+        <img [src]="selectedArtwork.image" [alt]="selectedArtwork.title" class="lightbox-image" />
+        <div class="lightbox-details">
+          <h2>{{ selectedArtwork.title }}</h2>
+          <p>Year: {{ selectedArtwork.year }}</p>
+          <p>Materials: {{ selectedArtwork.materials }}</p>
+          <p>Dimensions: {{ selectedArtwork.dimensions }}</p>
+          <button *ngIf="selectedArtwork.purchaseLink" (click)="purchaseArtwork()">
+Purchase via WhatsApp          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

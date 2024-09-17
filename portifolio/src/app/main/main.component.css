@@ -1,0 +1,273 @@
+.home-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .hero-section {
+    position: relative;
+    height: 400px;
+    background: url('/assets/hero-image.jpg') center/cover no-repeat; /* Replace with actual hero image URL */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-section .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .artist-statement, .featured-works, .upcoming-exhibitions, .contact-info {
+    margin: 40px 0;
+  }
+  
+  .artist-statement h2, .featured-works h2, .upcoming-exhibitions h2, .contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .featured-works {
+    text-align: center;
+  }
+  
+  .upcoming-exhibitions ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .upcoming-exhibitions li {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info .social-media {
+    margin-top: 10px;
+  }
+  
+  .contact-info .social-media a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .contact-info .social-media a:hover {
+    color: #007acc;
+  }
+  
+  .newsletter-signup {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .newsletter-signup input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .newsletter-signup button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007acc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter-signup button:hover {
+    background-color: #005fa3;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    /* max-height: 400px; */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .dots {
+    text-align: center;
+  }
+  .caption {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }.upcoming-exhibitions {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upcoming-exhibitions h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .exhibitions {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+  
+  @media (min-width: 768px) {
+    .exhibitions {
+      grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .exhibitions {
+      grid-template-columns: 1fr 1fr 1fr; /* Three columns for larger screens */
+    }
+  }
+  
+  .exhibition {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .exhibition:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .exhibition h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .exhibition p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .featured-works {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-works h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .featured-artworks {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+  
+  @media (min-width: 768px) {
+    .featured-artworks {
+      grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .featured-artworks {
+      grid-template-columns: 1fr 1fr 1fr; /* Three columns for larger screens */
+    }
+  }
+  
+  .artwork {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .artwork img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .artwork h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .artwork p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+    text-align: center;
+  }
+  
