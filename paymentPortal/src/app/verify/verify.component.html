@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Verify Bill</mat-card-title>
+    <mat-card-subtitle>Get Invoice and Payment receipts</mat-card-subtitle>
+    <button mat-icon-button (click)="toggleForm()">
+      <mat-icon *ngIf="!formHidden">check_circle</mat-icon>
+      <mat-icon *ngIf="formHidden">cancel</mat-icon>
+    </button>
+  </mat-card-header>
+
+  <mat-card-content *ngIf="!formHidden">
+    <form [formGroup]="verifyBillForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Invoice Number/Control Number</mat-label>
+        <input matInput formControlName="invoiceNumber" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">SUBMIT</button>
+    </form>
+  </mat-card-content>
+</mat-card>

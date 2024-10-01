@@ -7,10 +7,10 @@ import { Component, OnInit ,ChangeDetectorRef, NgZone} from '@angular/core';
 })
 export class MainComponent implements OnInit {
   images: string[] = [
-    // '../../assets/Ngalawa-Ausiy.png',  // Ensure the paths are correct
-    // '../../assets/Tumekuja-Nasr-Daudi.png',
+    '../../assets/Ngalawa-Ausiy.png',  // Ensure the paths are correct
+    '../../assets/Tumekuja-Nasr-Daudi.png',
     '../../assets/kuenstler-mohamed-hamza-ausiy-asante-sanaa-zanzibar-tanzania-artist.jpg',
-    // '../../assets/kuenstler-mohamed-hamza-ausiy-pinsel-brush-farbe-colour-painting-zanzibar.jpg',
+    '../../assets/kuenstler-mohamed-hamza-ausiy-pinsel-brush-farbe-colour-painting-zanzibar.jpg',
   ];
   currentSlide: number = 0;
   private slideInterval: any;

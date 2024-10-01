@@ -1,0 +1,61 @@
+/* General styling for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a6a92; /* Adjust to match the blue color */
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Styling for the logo section */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 60px; /* Adjust height to fit the image */
+    margin-right: 10px;
+  }
+  
+  /* Styling for the title text next to the logo */
+  .navbar-title h1 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  .navbar-title p {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  
+  /* Styling for the payment portal link */
+  .navbar-link {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-logo {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-title h1 {
+      font-size: 1.2em;
+    }
+  
+    .navbar-link {
+      font-size: 1em;
+    }
+  }
+  
